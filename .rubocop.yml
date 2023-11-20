@@ -1,0 +1,13 @@
+require: rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'spec/spec_helper.rb'
+
+Layout/LineLength:
+  Max: 80
+  Enabled: true
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/*'
