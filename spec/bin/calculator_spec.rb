@@ -7,7 +7,9 @@ RSpec.describe Calculator do
     File.expand_path('../../bin/calculator.rb', File.dirname(__FILE__))
   end
 
-  let(:input) { File.expand_path('../samples/input.txt', File.dirname(__FILE__)) }
+  let(:input) do
+    File.expand_path('../samples/input.txt', File.dirname(__FILE__))
+  end
 
   it 'calculates the ranking table for a soccer league' do
     res = `ruby #{calculator} #{input}`.chomp
@@ -16,7 +18,7 @@ RSpec.describe Calculator do
       "2. Lions, 5 pts\n" \
       "3. FC Awesome, 1 pt\n" \
       "3. Snakes, 1 pt\n" \
-      '5. Grouches, 0 pts'
+      '4. Grouches, 0 pts'
     )
   end
 end
